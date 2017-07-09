@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Tutorial</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container-fluid fadeOnLoad">
+      <div class="row">
+        <div class="col-md-12" id="hero">
+          <div class="inner-text text-center">
+            <h1 id="hero-header">The jQuery Challenge</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row col-narrow gap">
+        <div class="col-xs-4 text-center">
+          <button class="btn btn-default" type="button" id="button1">Button 1</button>
+        </div>
+        <div class="col-xs-4 text-center">
+          <button class="btn btn-default" type="button" id="button2">Button 2</button>
+        </div>
+        <div class="col-xs-4 text-center">
+          <a href="page1.html" class="btn btn-info" type="button" id="button3">Button 3</a>
+        </div>
+      </div>
+
+      <div class="row gap fadeOnLoad2" id="panels">
+        <div class="col-xs-4 text-center">
+          <div class="panel panel-default" id="panel1">
+            <div class="panel-heading">Panel 1</div>
+            <div class="panel-body">Panel 1 Content</div>
+          </div>
+        </div>
+        <div class="col-xs-4 text-center">
+          <div class="panel panel-success" id="panel2">
+            <div class="panel-heading">Panel 2</div>
+            <div class="panel-body" id="panel2body">Panel 2 Content</div>
+          </div>
+        </div>
+        <div class="col-xs-4 text-center" id="panel3">
+          <div class="panel panel-info">
+            <div class="panel-heading">Panel 3</div>
+            <div class="panel-body">Panel 3 Content</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row gap">
+        <div class="col-xs-12 text-center">
+          <button class="btn btn-default" id="surprise" type="button" name="button">Click for a surprise!</button>
+          <h1 id="surprise-text">jQuery is Amazing!</h1>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      $('#button1').on('click', function() {
+        $('#panel1').fadeToggle();
+      });
+
+      $('#button2').on('click', function() {
+        $('#hero').slideToggle(1000);
+        $('#panels').delay(1000).slideToggle(1000);
+        $('#surprise').fadeIn(1000);
+      });
+
+      $('.fadeOnLoad').fadeIn(500);
+
+      $('.fadeOnLoad2').fadeIn(500);
+
+      $('#button1').on('click', function() {
+        $('#panels').toggleClass('animated flip');
+      });
+
+      $('#surprise').on('click', function() {
+        $('#surprise-text').fadeIn().addClass('animated zoomIn');
+      });
+
+      $('#hero-header').hover(function() {
+        $('#button2').toggleClass('animated rubberBand');
+      });
+
+
+
+      /*! Fades out the whole page when clicking links */
+      $('a').click(function(e) {
+      e.preventDefault();
+      newLocation = this.href;
+      $('body').fadeOut('slow', newpage);
+      });
+      function newpage() {
+      window.location = newLocation;
+      }
+
+    });
+
+  </script>
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+h1 {
+  font-size: 40px;
+}
+#hero {
+  background-image: url(media/gui-2457113_1280.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+
+
+#hero2 {
+  background-image: url(media/office-2420271_1280.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+}
+
+.inner-text {
+  padding: 150px 10%;
+  color: #6dd4c7;
+  text-shadow: 2px 2px 4px grey;
+}
+.inner-text2 {
+  padding: 150px 10%;
+  color: yellow;
+  text-shadow: 2px 2px 4px grey;
+}
+.col-narrow {
+  margin: 0 20%;
+}
+
+.gap {
+  margin-top: 20px;
+}
+
+.fadeOnLoad {
+  display: none;
+}
+
+.fadeOnLoad2 {
+  display: none;
+}
+
+#surprise {
+  display: none;
+}
+
+#surprise-text {
+  display: none;
+  color: grey;
+}
